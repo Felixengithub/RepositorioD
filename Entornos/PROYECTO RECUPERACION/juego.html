@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <p>Abre la consola para jugar.</p>
+    <script>
+        //Instrucciones:
+        // El juego comienza mostrando la palabra oculta con guiones bajos (_).
+        // Hay que adivinar letras
+        // El juego sigue hasta que aciertes todas las letras o se te acaben los intentos.
+        // Si ganas o pierdes, el juego se reinicia automáticamente.
+
+        const sec = "javascript"; // Puedes cambiar la palabra secreta
+        let ad = [];
+        let vi = 6;
+
+        function mue() {
+            let resultado = "";
+            for (let letra of sec) {
+                if (ad.includes(letra)) {
+                    resultado += letra + " ";
+                } else {
+                    resultado += "_ _";
+                }
+            }
+            console.log(resultado.trim());
+        }
+
+        function adivinarLetra(letra) {
+            if (ad.includes(letra)) {
+                console.log(`${letra}`);
+                return;
+            }
+
+            if (sec.includes(letra)) {
+                ad.push(letra);
+                console.log(`${letra} está`);
+            } else {
+                vi=vi-2;
+                console.log(`${letra} no ${vi}`);
+            }
+
+            mue();
+            com();
+        }
+
+        function com() {
+            if (vi === 0) {
+                console.log("Has perdido." + sec);
+                reiniciarJuego();
+            } else if (!sec.split("").some(letra => !ad.includes(letra))) {
+                console.log("¡Felicidades, has ganado!");
+                reiniciarJuego();
+            }
+        }
+
+        function reiniciarJuego() {
+            ad = [];
+            vi = 6;
+        }
+
+        // El juego empieza
+        mue();
+    </script>
+</body>
+</html>
