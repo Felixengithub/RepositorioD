@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Tablas y Listas Avanzadas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio: Tablas y Listas Avanzadas</h1>
+    <p>En este ejercicio deberás crear tablas y listas complejas que combinen diferentes atributos y estructuras. Sigue las indicaciones a continuación:</p>
+    
+    <h2>Parte 1: Listas</h2>
+    <p>
+        Crea una sección de listas complejas siguiendo los siguientes pasos:
+    </p>
+    <ul>
+        <li>
+            Crea una lista desordenada con tres categorías principales (por ejemplo: "Películas", "Libros", "Series").
+            Cada categoría debe contener una lista ordenada con al menos tres elementos, enumerando tus favoritos en cada categoría.
+        </li>
+        <li>
+            En una de las categorías, utiliza listas anidadas para incluir subcategorías. Por ejemplo, en "Películas" podrías añadir subcategorías como "Acción", "Comedia" y "Drama", con elementos correspondientes en cada subcategoría.
+        </li>
+        <li>
+            Cambia el estilo de las listas desordenadas (circle, square, disc) y el tipo de las listas ordenadas (números romanos, letras mayúsculas y minúsculas).
+        </li>
+        <li>
+            Utiliza el atributo start en al menos una de las listas ordenadas para que no comience desde el valor predeterminado.
+        </li>
+    </ul>
+    <div>
+        <!-- Solución de las listas -->
+        <ul style="list-style-type: disc;">
+            <li>Películas
+                <ol type="I">
+                    <li>El Señor de los Anillos</li>
+                    <li>Star Wars</li>
+                    <li>Matrix</li>
+                </ol>
+            </li>
+            <li>Libros
+                <ol type="a" start="5">
+                    <li>1984</li>
+                    <li>El Principito</li>
+                    <li>Cien Años de Soledad</li>
+                </ol>
+            </li>
+            <li>Series
+                <ul style="list-style-type: square;">
+                    <li>Drama
+                        <ul style="list-style-type: circle;">
+                            <li>Breaking Bad</li>
+                            <li>The Crown</li>
+                        </ul>
+                    </li>
+                    <li>Comedia
+                        <ul style="list-style-type: circle;">
+                            <li>Friends</li>
+                            <li>Brooklyn Nine-Nine</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Parte 2: Tablas</h2>
+    <p>
+        Crea una tabla compleja para mostrar un horario semanal ficticio de tus actividades con los siguientes requisitos:
+    </p>
+    <ul>
+        <li>
+            La tabla debe incluir un encabezado con los días de la semana como columnas y las franjas horarias (Mañana, Tarde, Noche) como filas.
+        </li>
+        <li>
+            En el cuerpo de la tabla, rellena las actividades correspondientes para cada combinación de día y franja horaria.
+        </li>
+        <li>
+            Fusiona celdas verticales o horizontales donde las actividades sean las mismas para una franja horaria o un día completo, utilizando los atributos rowspan o colspan.
+        </li>
+        <li>
+            Incluye un pie de tabla con una celda que abarque todas las columnas, indicando "Horario sujeto a cambios".
+        </li>
+        <li>
+            Añade un borde visible a la tabla y usa cellspacing y cellpading a tu gusto.
+        </li>
+    </ul>
+    <div>
+        <!-- Solución de la tabla -->
+        <table cellspacing="5" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Franja Horaria</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mañana</td>
+                    <td rowspan="2">Estudio</td>
+                    <td>Gym</td>
+                    <td>Trabajo</td>
+                    <td rowspan="2">Proyecto</td>
+                    <td rowspan="3">Descanso</td>
+                </tr>
+                <tr>
+                    <td>Tarde</td>
+                    <td rowspan="2">Reuniones</td>
+                    <td rowspan="2">Clases</td>
+                </tr>
+                <tr>
+                    <td>Noche</td>
+                    <td>Cine</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">Horario sujeto a cambios</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

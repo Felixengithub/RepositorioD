@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE catalogo [
+    <!ELEMENT catalogo (producto+)>
+    <!ELEMENT producto (nombre, categoria, precio, vegano?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT categoria (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT vegano EMPTY>
+]>

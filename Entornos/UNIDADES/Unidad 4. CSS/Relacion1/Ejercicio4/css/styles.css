@@ -1,0 +1,21 @@
+
+section {
+    background-image: url('https://placehold.co/300x100');
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #3498db;
+}

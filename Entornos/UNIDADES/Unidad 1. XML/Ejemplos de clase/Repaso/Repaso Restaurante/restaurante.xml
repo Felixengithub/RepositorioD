@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="restaurante.xsd">
+    <mesa>
+        <numeroMesa>01</numeroMesa>
+        <capacidadMesa>4</capacidadMesa>
+        <estadoMesa>Reservada</estadoMesa>
+    </mesa>
+    <mesa>
+        <numeroMesa>02</numeroMesa>
+        <capacidadMesa>2</capacidadMesa>
+        <estadoMesa>Libre</estadoMesa>
+    </mesa>
+    <reserva>
+        <idReserva>RESERVA-101</idReserva>
+        <nombreCliente>Carlos Díaz</nombreCliente>
+        <fechaReserva>2024-07-10</fechaReserva>
+        <horaReserva>20:00</horaReserva>
+        <menuPersonalizado>
+            <plato>Ensalada César</plato>
+            <plato>Filete de ternera</plato>
+            <bebida>Vino tinto</bebida>
+        </menuPersonalizado>
+        <pedidos>
+            <plato>Ensalada César</plato>
+            <plato>Filete de ternera</plato>
+            <bebida>Vino tinto</bebida>
+        </pedidos>
+        <totalPedido>45.90</totalPedido>
+    </reserva>
+</restaurante>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea un documento XML con DTD que cumpla los siguientes requisitos:
+1. Elemento raíz Biblioteca
+2. Biblioteca compuesta por 1 o más libros
+3. Cada libro formado por nombre, autor y fecha de publicación. Puede haber 0 autores o más.
+4. Fecha de publicación formada por dia, mes y año
+Fecha de publicación puede haber una o ninguna. -->
+
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (nombre, autor*, fecha?)>
+    <!ELEMENT fecha (dia, mes, anio)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>
+
+<biblioteca>
+    <libro>
+        <nombre>Fundación</nombre>
+        <autor>Isaac Asimov</autor>
+        <fecha>
+            <dia>4</dia>
+            <mes>6</mes>
+            <anio>1965</anio>
+        </fecha>
+    </libro>
+    <libro>
+        <nombre>Buenos presagios</nombre>
+        <autor>Terry Pratchett</autor>
+        <autor>Neil Gaiman</autor>
+    </libro>
+</biblioteca>

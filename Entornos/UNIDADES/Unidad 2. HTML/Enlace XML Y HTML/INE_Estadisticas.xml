@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="INE_Estadisticas.xsl"?>
+<estadisticas>
+  <origen>
+    <productor>Instituto Nacional de Estadística - INE</productor>
+    <web>https://www.ine.es</web>
+    <language>es</language>
+  </origen>
+  <elaborado>2024-10-29T10:00:00</elaborado>
+  <datos>
+    <provincia nombre="Granada">
+      <poblacion_total>919168</poblacion_total>
+      <poblacion_hombres>448583</poblacion_hombres>
+      <poblacion_mujeres>470585</poblacion_mujeres>
+    </provincia>
+    <provincia nombre="Málaga">
+      <poblacion_total>1726200</poblacion_total>
+      <poblacion_hombres>849132</poblacion_hombres>
+      <poblacion_mujeres>876068</poblacion_mujeres>
+    </provincia>
+  </datos>
+</estadisticas>

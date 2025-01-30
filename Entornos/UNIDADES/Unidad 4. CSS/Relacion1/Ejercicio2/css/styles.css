@@ -1,0 +1,15 @@
+/* Cambiar el color del texto de todos los párrafos */
+p {
+    color: #333; /* Color del texto */
+}
+
+/* Fondo específico para los párrafos con la clase "destacado" */
+.destacado {
+    background-color: #ffcc00; /* Fondo amarillo */
+    color: #000; /* Texto negro */
+}
+
+/* Cambiar el tamaño de la fuente del botón con el ID "accion" */
+#accion {
+    font-size: 20px; /* Tamaño de la fuente */
+}

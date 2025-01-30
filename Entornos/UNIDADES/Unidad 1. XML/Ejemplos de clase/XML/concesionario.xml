@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea un fichero XML con DTD integrado que cumpla los siguientes requisitos
+1. Elemento raíz concesionario
+2. concesionario está compuesto de coches (al menos uno)
+3. Los coches tienen marca, modelo, numero  de puertas y plazas
+4. Los coches tienen un atributo obligatorio color
+5. Los coches pueden ser eléctricos o no
+6. Cada coche tiene una lista de extras (puede no haber extras)
+7. El extra se compone de nombre, descripción(opcional) y precio
+8. Los coches pueden ser automáticos o no -->
+
+<!DOCTYPE concesionario [
+    <!ELEMENT concesionario (coche+)>
+    <!ELEMENT coche (marca, modelo, puertas, plazas, extras?, electrico?, automatico?)>
+    <!ELEMENT extras (extra+)>
+    <!ELEMENT extra (nombre, descripcion?, precio)>
+
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT puertas (#PCDATA)>
+    <!ELEMENT plazas (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+
+    <!ELEMENT electrico EMPTY>
+    <!ELEMENT automatico EMPTY>
+
+    <!ATTLIST coche color CDATA #REQUIRED>
+]>
+
+<concesionario>
+
+    <coche color="blanco">
+        <marca>Ford</marca>
+        <modelo>Ka</modelo>
+        <puertas>3</puertas>
+        <plazas>4</plazas>
+        <extras>
+            <extra>
+                <nombre>Asientos en llamas</nombre>
+                <descripcion>Trasero calentito</descripcion>
+                <precio>600</precio>
+            </extra>
+        </extras>
+        <automatico />
+    </coche>
+
+    <coche color="blanco">
+        <marca>Ford</marca>
+        <modelo>Ka</modelo>
+        <puertas>3</puertas>
+        <plazas>4</plazas>
+        <electrico />
+        <automatico />
+    </coche>
+
+    <coche color="blanco">
+        <marca>Ford</marca>
+        <modelo>Ka</modelo>
+        <puertas>3</puertas>
+        <plazas>4</plazas>
+        <extras>
+            <extra>
+                <nombre>Alerones</nombre>
+                <precio>600</precio>
+            </extra>
+        </extras>
+        <automatico />
+    </coche>
+
+</concesionario>

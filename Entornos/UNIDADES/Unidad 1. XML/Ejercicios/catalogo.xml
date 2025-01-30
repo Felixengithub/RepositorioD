@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE catalogo [
+    <!ELEMENT catalogo (videojuego+)>
+    <!ELEMENT videojuego (titulo, genero, plataforma, desarrollador, requisitos, multijugador?)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT plataforma (#PCDATA)>
+    <!ELEMENT desarrollador (#PCDATA)>
+    <!ELEMENT requisitos (RAM, CPU, GPU)>
+    <!ELEMENT RAM (#PCDATA)>
+    <!ELEMENT CPU (#PCDATA)>
+    <!ELEMENT GPU (#PCDATA)>
+    <!ELEMENT multijugador EMPTY>
+]>

@@ -1,0 +1,47 @@
+<script>
+
+    // Declaro variables
+    let diasViaje, presupuestoTotal
+    let gastoDiario, kilometrosDiarios
+    let kilometrosTotales = 0, gastoTotal = 0
+    let gastoDiarioMedio, presupuestoConsumido = 0
+
+    let diaActual
+
+    // Solicito datos base
+    diasViaje = Number(prompt("Introduce el número de días del viaje:"))
+    presupuestoTotal = Number(prompt("Introduce el presupuesto total para el viaje:"))
+
+    // El bucle se ejecuta mientras el día actual sea menor que los días de viaje
+    // programados y el presupuesto consumido sea menor que el 100%
+    for (diaActual = 1; diaActual <= diasViaje && presupuestoConsumido < 100; diaActual++) {
+
+        gastoDiario = Number(prompt("Introduce los gastos del día " + diaActual + ":"))
+        
+        gastoTotal += gastoDiario // gastoTotal = gastoTotal + gastoDiario
+        presupuestoConsumido = (gastoTotal / presupuestoTotal) * 100
+
+        // Solo solicito los datos de kilómetros si no he superado el 100% del presupuesto
+        if (presupuestoConsumido <= 100) {
+            kilometrosDiarios = Number(prompt("Introduce los kilómetros recorridos en el día " + diaActual + ":"))
+
+            kilometrosTotales += kilometrosDiarios
+        }
+
+    }
+
+    if (presupuestoConsumido > 100) {
+        alert("¡Alerta! Has superado el presupuesto de " + presupuestoTotal + " €.")
+    } else {
+
+        gastoDiarioMedio = gastoTotal / (diaActual - 1)
+
+        console.log("Resumen del viaje:")
+        console.log("- Total de kilómetros recorridos: " + kilometrosTotales + " km")
+        console.log("- Gasto diario medio: " + gastoDiarioMedio + " €")
+        console.log("- Porcentaje del presupuesto gastado: " + presupuestoConsumido + "%")
+    }
+
+</script>
+
+

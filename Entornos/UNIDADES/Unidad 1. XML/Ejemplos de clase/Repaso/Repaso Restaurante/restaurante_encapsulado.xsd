@@ -1,0 +1,99 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="numeroMesaType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="capacidadMesaType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="estadoMesaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Libre"/>
+            <xs:enumeration value="Reservada"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idReservaType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="RESERVA-\d{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fechaType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="horaType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}:\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="platoType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="bebidaType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="totalPedidoType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.01"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="restaurante">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mesa" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="numeroMesa" type="numeroMesaType"/>
+                            <xs:element name="capacidadMesa" type="capacidadMesaType"/>
+                            <xs:element name="estadoMesa" type="estadoMesaType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reserva" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="idReserva" type="idReservaType"/>
+                            <xs:element name="nombreCliente" type="xs:string"/>
+                            <xs:element name="fechaReserva" type="fechaType"/>
+                            <xs:element name="horaReserva" type="horaType"/>
+                            <xs:element name="menuPersonalizado">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="plato" type="platoType" maxOccurs="unbounded"/>
+                                        <xs:element name="bebida" type="bebidaType" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="pedidos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="plato" type="platoType" maxOccurs="unbounded"/>
+                                        <xs:element name="bebida" type="bebidaType" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="totalPedido" type="totalPedidoType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

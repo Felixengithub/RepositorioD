@@ -1,0 +1,64 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Definición de tipos restringidos -->
+    <xs:simpleType name="numeroHabitacionType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoHabitacionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Individual"/>
+            <xs:enumeration value="Doble"/>
+            <xs:enumeration value="Suite"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="disponibilidadType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Disponible"/>
+            <xs:enumeration value="Ocupada"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idHuespedType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="HUESPED-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fechaType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición del elemento hotel -->
+    <xs:element name="hotel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="habitacion" minOccurs="2" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="numeroHabitacion" type="numeroHabitacionType"/>
+                            <xs:element name="tipoHabitacion" type="tipoHabitacionType"/>
+                            <xs:element name="precioPorNoche" type="xs:decimal"/>
+                            <xs:element name="disponibilidad" type="disponibilidadType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reserva" minOccurs="2" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="idHuesped" type="idHuespedType"/>
+                            <xs:element name="nombreHuesped" type="xs:string"/>
+                            <xs:element name="fechaEntrada" type="fechaType"/>
+                            <xs:element name="fechaSalida" type="fechaType"/>
+                            <xs:element name="numeroHabitacion" type="numeroHabitacionType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

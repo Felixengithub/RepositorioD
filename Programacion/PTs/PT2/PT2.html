@@ -1,0 +1,62 @@
+<script>
+    // Inicialización de variables
+    const dientes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    const visibles = ["🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷"]
+
+    let cantidadDientesEnfermos = Math.floor(Math.random() * 5) + 1
+    let cantidadDientesColocados = 0
+    let cantidadDientesPresionados = 0
+    let cantidadDientesSanos = dientes.length - cantidadDientesEnfermos
+    let jugadorActual = 1
+    let juegoTerminado = false
+
+    // Colocar dientes dañados de forma aleatoria
+    while (cantidadDientesColocados < cantidadDientesEnfermos) {
+        let posicionAleatoria = Math.floor(Math.random() * dientes.length)
+        if (dientes[posicionAleatoria] == 0) {
+            dientes[posicionAleatoria] = 1
+            cantidadDientesColocados++
+        }
+    }
+
+    // Ciclo principal del juego
+    while (!juegoTerminado) {
+        console.log("Estado visible: " + visibles)
+        console.log("Turno del jugador " + jugadorActual)
+
+        // Solicitar selección del jugador
+        let seleccion = prompt("Jugador " + jugadorActual + ", elige un diente (0-9):")
+        seleccion = Number(seleccion)
+
+        if (visibles[seleccion] != "🦷") {
+            console.log("Ese diente ya fue presionado. Elige otro.")
+        } else {
+
+            // Evaluar la selección
+            if (dientes[seleccion] == 1) {
+                visibles[seleccion] = "💥"
+                console.log("¡El cocodrilo mordió! Jugador " + jugadorActual + " pierde.")
+                juegoTerminado = true
+            } else {
+                visibles[seleccion] = "✅"
+                cantidadDientesPresionados++
+
+                // Verificar si todos los dientes sanos han sido presionados
+                if (cantidadDientesPresionados == cantidadDientesSanos) {
+                    console.log("¡Todos los dientes sanos han sido presionados! Ambos jugadores ganan.")
+                    juegoTerminado = true
+                }
+            }
+
+            // Cambiar turno
+            if (jugadorActual == 1) {
+                jugadorActual = 2
+            } else {
+                jugadorActual = 1
+            }
+        }
+    }
+
+    console.log("Estado visible: " + visibles)
+
+</script>

@@ -1,0 +1,116 @@
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+}
+
+/* Encabezado */
+.header {
+  background-color: #4b79a1;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list a.active {
+  font-weight: bold;
+}
+
+/* Sección Hero */
+.hero {
+  background-image: url('https://via.placeholder.com/1200x400');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  background-color: #27496d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  transform: scale(1.1);
+}
+
+/* Películas */
+.peliculas {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pelicula img {
+  border-radius: 10px;
+}
+
+.pelicula > h3 {
+  font-size: 1.2em;
+}
+
+/* Personajes */
+.personajes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.personaje1 {
+  background-color: #ffefd5;
+}
+
+.personaje2 {
+  background-color: #f0e68c;
+}
+
+.personaje3 {
+  background-color: #98fb98;
+}
+
+.personaje4 {
+  background-color: #afeeee;
+}
+
+.personaje img + h3:hover {
+  color: red;
+}
+
+/* Eventos */
+.eventos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.evento-igual {
+  background-color: #e0f7fa;
+}
+
+.evento-diferente {
+  background-color: #ffe4e1;
+}

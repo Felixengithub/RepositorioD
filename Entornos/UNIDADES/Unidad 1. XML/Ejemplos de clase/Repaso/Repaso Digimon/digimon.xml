@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<digidex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="digimon.xsd">
+    <digimon>
+        <name>Agumon</name>
+        <id>DG-0001</id>
+        <type>Vaccine</type>
+        <level>Rookie</level>
+        <abilities>
+            <ability>Pepper Breath</ability>
+            <ability>Spitfire Blast</ability>
+        </abilities>
+        <baseStats>
+            <HP>100</HP>
+            <ATK>70</ATK>
+            <DEF>50</DEF>
+        </baseStats>
+        <registrationDate>2024-01-01</registrationDate>
+        <!-- Agumon no es legendario -->
+    </digimon>
+    <digimon>
+        <name>WarGreymon</name>
+        <id>DG-0002</id>
+        <type>Vaccine</type>
+        <level>Mega</level>
+        <abilities>
+            <ability>Terra Force</ability>
+            <ability>Brave Shield</ability>
+        </abilities>
+        <baseStats>
+            <HP>900</HP>
+            <ATK>500</ATK>
+            <DEF>400</DEF>
+        </baseStats>
+        <registrationDate>2023-12-15</registrationDate>
+        <legendary />
+    </digimon>
+</digidex>

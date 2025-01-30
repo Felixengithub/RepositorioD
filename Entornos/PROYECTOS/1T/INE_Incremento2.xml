@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<estadisticas>
+  <origen>
+    <productor>Instituto Nacional de Estadística - INE</productor>
+    <web>https://www.ine.es</web>
+    <language>es</language>
+    <copyright>© INE. Autorizado el uso de la información y su reproducción citando a INE como autor de la misma.</copyright>
+    <nota_legal>https://www.ine.es/normativa/normaslegales</nota_legal>
+  </origen>
+  <elaborado>2024-10-29T10:00:00</elaborado>
+  <informe>
+    <titulo>Estadísticas Complejas por Provincia</titulo>
+    <fecha_publicacion>2024-10-28</fecha_publicacion>
+  </informe>
+  <datos>
+    <comunidad nombre="Andalucía">
+      <total_poblacion>8414245</total_poblacion>
+      <tasa_crecimiento>0.5</tasa_crecimiento>
+    </comunidad>
+    <provincia nombre="Granada">
+      <codigo_provincia>18</codigo_provincia>
+      <nivel_educativo>Universitario</nivel_educativo>
+      <tasa_paro>14.5</tasa_paro>
+      <demografia>
+        <poblacion_total>919168</poblacion_total>
+        <poblacion_hombres>448583</poblacion_hombres>
+        <poblacion_mujeres>470585</poblacion_mujeres>
+        <edad_media>42.3</edad_media>
+        <esperanza_vida>82.4</esperanza_vida>
+      </demografia>
+      <economia>
+        <ingreso_per_capita moneda="EUR">20000</ingreso_per_capita>
+        <tasa_natalidad>8.7</tasa_natalidad>
+      </economia>
+      <infraestructuras>
+        <hospitales>15</hospitales>
+        <centros_educativos>250</centros_educativos>
+      </infraestructuras>
+      <clima>
+        <temperatura_media unidades="Celsius">18.5</temperatura_media>
+        <precipitacion_anual unidades="mm">450</precipitacion_anual>
+      </clima>
+    </provincia>
+    <provincia nombre="Málaga">
+      <codigo_provincia>29</codigo_provincia>
+      <nivel_educativo>Secundario</nivel_educativo>
+      <tasa_paro>13.2</tasa_paro>
+      <demografia>
+        <poblacion_total>1726200</poblacion_total>
+        <poblacion_hombres>849132</poblacion_hombres>
+        <poblacion_mujeres>876068</poblacion_mujeres>
+        <edad_media>41.5</edad_media>
+        <esperanza_vida>81.9</esperanza_vida>
+      </demografia>
+      <economia>
+        <ingreso_per_capita moneda="EUR">22000</ingreso_per_capita>
+        <tasa_natalidad>9.1</tasa_natalidad>
+      </economia>
+      <infraestructuras>
+        <hospitales>20</hospitales>
+        <centros_educativos>300</centros_educativos>
+      </infraestructuras>
+      <clima>
+        <temperatura_media unidades="Celsius">19.0</temperatura_media>
+        <precipitacion_anual unidades="mm">400</precipitacion_anual>
+      </clima>
+    </provincia>
+    <provincia nombre="Sevilla">
+      <codigo_provincia>41</codigo_provincia>
+      <nivel_educativo>Primario</nivel_educativo>
+      <tasa_paro>15.8</tasa_paro>
+      <demografia>
+        <poblacion_total>1950212</poblacion_total>
+        <poblacion_hombres>960754</poblacion_hombres>
+        <poblacion_mujeres>989458</poblacion_mujeres>
+        <edad_media>43.1</edad_media>
+        <esperanza_vida>80.8</esperanza_vida>
+      </demografia>
+      <economia>
+        <ingreso_per_capita moneda="EUR">19500</ingreso_per_capita>
+        <tasa_natalidad>8.5</tasa_natalidad>
+      </economia>
+      <infraestructuras>
+        <hospitales>18</hospitales>
+        <centros_educativos>270</centros_educativos>
+      </infraestructuras>
+      <clima>
+        <temperatura_media unidades="Celsius">20.1</temperatura_media>
+        <precipitacion_anual unidades="mm">480</precipitacion_anual>
+      </clima>
+    </provincia>
+    <provincia nombre="Córdoba">
+      <codigo_provincia>14</codigo_provincia>
+      <nivel_educativo>Universitario</nivel_educativo>
+      <tasa_paro>12.9</tasa_paro>
+      <demografia>
+        <poblacion_total>785240</poblacion_total>
+        <poblacion_hombres>383120</poblacion_hombres>
+        <poblacion_mujeres>402120</poblacion_mujeres>
+        <edad_media>42.8</edad_media>
+        <esperanza_vida>83.1</esperanza_vida>
+      </demografia>
+      <economia>
+        <ingreso_per_capita moneda="EUR">21000</ingreso_per_capita>
+        <tasa_natalidad>7.9</tasa_natalidad>
+      </economia>
+      <infraestructuras>
+        <hospitales>12</hospitales>
+        <centros_educativos>220</centros_educativos>
+      </infraestructuras>
+      <clima>
+        <temperatura_media unidades="Celsius">21.0</temperatura_media>
+        <precipitacion_anual unidades="mm">380</precipitacion_anual>
+      </clima>
+    </provincia>
+    <provincia nombre="Jaén">
+      <codigo_provincia>23</codigo_provincia>
+      <nivel_educativo>Secundario</nivel_educativo>
+      <tasa_paro>16.1</tasa_paro>
+      <demografia>
+        <poblacion_total>632234</poblacion_total>
+        <poblacion_hombres>310234</poblacion_hombres>
+        <poblacion_mujeres>322000</poblacion_mujeres>
+        <edad_media>44.2</edad_media>
+        <esperanza_vida>81.5</esperanza_vida>
+      </demografia>
+      <economia>
+        <ingreso_per_capita moneda="EUR">18000</ingreso_per_capita>
+        <tasa_natalidad>6.8</tasa_natalidad>
+      </economia>
+      <infraestructuras>
+        <hospitales>10</hospitales>
+        <centros_educativos>200</centros_educativos>
+      </infraestructuras>
+      <clima>
+        <temperatura_media unidades="Celsius">17.8</temperatura_media>
+        <precipitacion_anual unidades="mm">500</precipitacion_anual>
+      </clima>
+    </provincia>
+  </datos>
+</estadisticas>

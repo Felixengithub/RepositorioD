@@ -1,0 +1,40 @@
+<script>
+
+    let numeroElectrodomesticos, precioKWh, potenciaContratada
+    let potenciaElectrodomestico = 0, horasElectrodomestico
+    let consumoDiarioElectrodomestico, consumoMensualTotal = 0
+    let costeTotal
+
+    numeroElectrodomesticos = Number(prompt("Introduzca número de electrodomésticos:"))
+    precioKWh = Number(prompt("Introduzca precio por KW/h:"))
+    potenciaContratada = Number(prompt("Introduzca potencia contratada:"))
+
+    // El bucle se ejecuta mientras queden electrodomésticos 
+    // Y el electrodomestico anterior no se haya pasado de potencia
+    for (let i = 1; i <= numeroElectrodomesticos && potenciaElectrodomestico <= potenciaContratada; i++) {
+        potenciaElectrodomestico = Number(prompt("Introduce la potencia del electrodoméstico " + i + " (en vatios):"))
+
+        // Solo solicito las horas de uso si la potencia del electrodoméstico no 
+        // supera la potencia contratada
+        if (potenciaElectrodomestico <= potenciaContratada) {
+            horasElectrodomestico = Number(prompt("Introduce el número de horas de uso diario:"))
+
+            // Divido por 1000 para transformar de W a KW y multiplico por 
+            // las horas para obener el consumo en KWh (energía)
+            consumoDiarioElectrodomestico = potenciaElectrodomestico / 1000 * horasElectrodomestico
+
+            consumoMensualTotal += (consumoDiarioElectrodomestico * 30)
+        }
+    }
+
+    if (potenciaElectrodomestico > potenciaContratada) {
+        alert("¡Alerta! Has superado la potencia de " + potenciaContratada + " W.")
+    } else {
+        costeTotal = consumoMensualTotal * precioKWh
+
+        console.log("Consumo total mensual: " + consumoMensualTotal + " kWh")
+        console.log("Coste total mensual: " + costeTotal + " €")
+    }
+
+
+</script>

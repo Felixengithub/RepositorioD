@@ -1,0 +1,91 @@
+<!-- 
+Ejercicio: Información de empleados
+Enunciado:
+Define un esquema XSD que almacene información sobre empleados de una empresa.
+ Los empleados deben tener:
+
+Nombre del empleado (obligatorio): Longitud mínima de 3 caracteres y máxima de 50.
+Correo electrónico (opcional): Debe cumplir con un formato básico de correo electrónico utilizando una expresión regular.
+Número de teléfono (obligatorio): Formato +xx-xxxx-xxxx, donde xx son los primeros dos dígitos del código de país, seguido por cuatro dígitos para el código de área, y luego otros cuatro dígitos para el número principal.
+Fecha de nacimiento (obligatorio): Debe estar en el formato YYYY-MM-DD.
+Fecha de alta (obligatorio): Debe estar en el formato DD-<mes>-YYYY
+Salario (opcional): Un número decimal positivo mayor que 1000. -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Tipo restringido para el teléfono con formato +xx-xxxx-xxxx -->
+    <xs:simpleType name="TelefonoType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+\d{2}-\d{4}-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo restringido para el correo electrónico con formato básico -->
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo restringido para la fecha de nacimiento en formato YYYY-MM-DD -->
+    <xs:simpleType name="FechaNacimientoType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo restringido para la fecha de alta en formato DD-mes-YYYY -->
+    <xs:simpleType name="FechaAltaType">
+        <xs:restriction base="xs:string">
+            <!-- El formato es DD-nombreDelMes-YYYY -->
+            <xs:pattern value="\d{2}-(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)-\d{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición de la empresa con una lista de empleados -->
+    <xs:element name="empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empleado">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <!-- Nombre del empleado con restricción de longitud -->
+                            <xs:element name="nombre" minOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="3"/>
+                                        <xs:maxLength value="50"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <!-- Teléfono con formato +xx-xxxx-xxxx -->
+                            <xs:element name="telefono" type="TelefonoType"/>
+
+                            <!-- Correo electrónico opcional con patrón -->
+                            <xs:element name="email" type="EmailType" minOccurs="0"/>
+
+                            <!-- Fecha de nacimiento en formato YYYY-MM-DD -->
+                            <xs:element name="fechaNacimiento" type="FechaNacimientoType"/>
+
+                            <!-- Fecha de alta en formato DD-mes-YYYY -->
+                            <xs:element name="fechaAlta" type="FechaAltaType"/>
+
+                            <!-- Salario opcional, número decimal positivo -->
+                            <xs:element name="salario" minOccurs="0">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:minExclusive value="1000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

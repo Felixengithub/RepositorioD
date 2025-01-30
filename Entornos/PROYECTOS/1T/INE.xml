@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<estadisticas>
+  <origen>
+    <productor>Instituto Nacional de Estadística - INE</productor>
+    <web>https://www.ine.es</web>
+    <language>es</language>
+    <copyright>© INE. Autorizado el uso de la información y su reproducción citando a INE como autor de la misma.</copyright>
+    <nota_legal>https://www.ine.es/normativa/normaslegales</nota_legal>
+  </origen>
+  <elaborado>2024-10-29T10:00:00</elaborado>
+  <informe>
+    <titulo>Estadísticas de Población por Provincia</titulo>
+    <fecha_publicacion>2024-10-28</fecha_publicacion>
+  </informe>
+  <datos>
+    <provincia nombre="Granada">
+      <poblacion_total>919168</poblacion_total>
+      <poblacion_hombres>448583</poblacion_hombres>
+      <poblacion_mujeres>470585</poblacion_mujeres>
+    </provincia>
+    <provincia nombre="Málaga">
+      <poblacion_total>1726200</poblacion_total>
+      <poblacion_hombres>849132</poblacion_hombres>
+      <poblacion_mujeres>876068</poblacion_mujeres>
+    </provincia>
+    <provincia nombre="Sevilla">
+      <poblacion_total>1950212</poblacion_total>
+      <poblacion_hombres>960754</poblacion_hombres>
+      <poblacion_mujeres>989458</poblacion_mujeres>
+    </provincia>
+  </datos>
+</estadisticas>

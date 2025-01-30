@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="hotel_encapsulado.xsd">
+    
+    <habitacion>
+        <numeroHabitacion>109</numeroHabitacion>
+        <tipoHabitacion>Individual</tipoHabitacion>
+        <precioPorNoche>100.50</precioPorNoche>
+        <disponibilidad>Disponible</disponibilidad>
+    </habitacion>
+    <habitacion>
+        <numeroHabitacion>102</numeroHabitacion>
+        <tipoHabitacion>Doble</tipoHabitacion>
+        <precioPorNoche>150.75</precioPorNoche>
+        <disponibilidad>Ocupada</disponibilidad>
+    </habitacion>
+    <reserva>
+        <idHuesped>HUESPED-1234</idHuesped>
+        <nombreHuesped>Juan Pérez</nombreHuesped>
+        <fechaEntrada>2024-05-01</fechaEntrada>
+        <fechaSalida>2024-05-07</fechaSalida>
+        <numeroHabitacion>101</numeroHabitacion>
+    </reserva>
+    <reserva>
+        <idHuesped>HUESPED-5678</idHuesped>
+        <nombreHuesped>María Gómez</nombreHuesped>
+        <fechaEntrada>2024-06-01</fechaEntrada>
+        <fechaSalida>2024-06-05</fechaSalida>
+        <numeroHabitacion>102</numeroHabitacion>
+    </reserva>
+</hotel>

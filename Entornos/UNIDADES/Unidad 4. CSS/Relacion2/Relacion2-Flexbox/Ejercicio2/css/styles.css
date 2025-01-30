@@ -1,0 +1,51 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Ejercicio 2 */
+.flex-container.flex-direction {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.flex-container.flex-direction {
+    flex-direction: row; /* Cambiar entre row, row-reverse, column, column-reverse para observar los efectos */
+}
+
+.flex-item.red {
+    background-color: #ff9999;
+    border: 1px solid #ff4d4d;
+    padding: 20px;
+    text-align: center;
+}
+
+.flex-item.green {
+    background-color: #99ff99;
+    border: 1px solid #4dff4d;
+    padding: 20px;
+    text-align: center;
+}
+
+.flex-item.blue {
+    background-color: #9999ff;
+    border: 1px solid #4d4dff;
+    padding: 20px;
+    text-align: center;
+}

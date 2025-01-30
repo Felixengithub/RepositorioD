@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Crea un documento XML con DTD que cumpla los siguientes requisitos:
+1. Elemento raíz Carta
+2. Carta compuesta por 1 o más platos
+3. Cada plato formado por nombre, descripción, alérgenos, e ingredientes. 
+4. Puede haber 0 alérgenos o más.
+5. Debe haber 1 ingrediente o más.
+6. Cada ingrediente está formado por nombre, cantidad y unidad de medida.
+7. Los alérgenos son texto.
+8. El plato puede ser vegano o no. -->
+
+<!DOCTYPE carta [
+    <!ELEMENT carta (plato+)>
+    <!ELEMENT plato (nombre, descripcion, alergenos?, ingredientes, vegano?)>
+    <!ELEMENT alergenos (alergeno*)>
+    <!ELEMENT ingredientes (ingrediente+)>
+    <!ELEMENT ingrediente (nombre, cantidad, unidadMedida)>
+
+    <!ELEMENT alergeno (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT unidadMedida (#PCDATA)>
+
+    <!ELEMENT vegano EMPTY>
+
+    <!ATTLIST plato tipo CDATA #REQUIRED>
+]>
+
+<carta>
+    <plato tipo = "vegano">
+        <nombre>Macarrones</nombre>
+        <descripcion>Tubitos de pasta</descripcion>
+        <alergenos>
+            <alergeno>Gluten</alergeno>
+            <alergeno>Leche</alergeno>
+        </alergenos>
+        <ingredientes>
+            <ingrediente>
+                <nombre>Harina</nombre>
+                <cantidad>200</cantidad>
+                <unidadMedida>gramo</unidadMedida>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Agua</nombre>
+                <cantidad>200</cantidad>
+                <unidadMedida>gramo</unidadMedida>
+            </ingrediente>
+        </ingredientes>
+        <vegano />
+    </plato>
+
+    <plato tipo = "vegano">
+        <nombre>Agua</nombre>
+        <descripcion>H2O</descripcion>
+        <ingredientes>
+            <ingrediente>
+                <nombre>Agua</nombre>
+                <cantidad>200</cantidad>
+                <unidadMedida>gramo</unidadMedida>
+            </ingrediente>
+        </ingredientes>
+        <vegano />
+    </plato>
+
+</carta>

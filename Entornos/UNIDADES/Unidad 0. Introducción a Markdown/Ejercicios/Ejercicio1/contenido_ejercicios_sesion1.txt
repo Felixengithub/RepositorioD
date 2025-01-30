@@ -1,0 +1,47 @@
+Ejercicio 1:
+
+Mi Documento Markdown
+
+Sección 1: Introducción
+
+Este es un párrafo donde aplicamos negrita y cursiva. 
+
+Elemento 1
+Elemento 2
+Elemento 3
+
+Primer ítem
+Segundo ítem
+Tercer ítem
+
+
+Ejercicio 2:
+
+Recursos Útiles
+
+Markdown Guide: https://www.markdownguide.org
+GitHub Flavored Markdown: https://guides.github.com/features/mastering-markdown/
+Documentación de Markdown: https://daringfireball.net/projects/markdown/
+
+
+Ejercicio 3:
+
+Manual de Markdown
+
+Markdown es un lenguaje de marcado sencillo que permite crear documentos con formato enriquecido utilizando solo texto plano.
+
+Ventajas de Markdown:
+Fácil de aprender
+Amplio soporte en diferentes plataformas
+Ideal para escribir documentación
+Es multiplataforma
+Funciona en Windows
+Funciona en Linux
+Funciona en macOS
+
+Abre tu editor de texto favorito.
+Escribe tu contenido en formato Markdown.
+Guarda el archivo con la extensión `.md`.
+Procesa el archivo para convertirlo en HTML o PDF.
+
+Recuerda siempre revisar tu documento para asegurar que el formato es correcto antes de compartirlo.

@@ -1,0 +1,113 @@
+<script>
+    // **Inicialización de variables**
+
+    // Este array representa los dientes del cocodrilo.
+    // 0 = Diente sano, 1 = Diente enfermo.
+    const dientes = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    // Este array es lo que los jugadores ven. Todos los dientes comienzan ocultos con el emoji "🦷".
+    const visibles = ["🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷", "🦷"]
+
+    // Número aleatorio de dientes enfermos, entre 1 y 5.
+    let cantidadDientesEnfermos = Math.floor(Math.random() * 5) + 1
+
+    // Contador para saber cuántos dientes enfermos hemos colocado en el array `dientes`.
+    let cantidadDientesColocados = 0
+
+    // Contador para saber cuántos dientes sanos ya han sido presionados.
+    let cantidadDientesPresionados = 0
+
+    // Calculamos la cantidad de dientes sanos como la diferencia entre el total de dientes y los enfermos.
+    let cantidadDientesSanos = dientes.length - cantidadDientesEnfermos
+
+    // Indica el jugador actual (1 o 2).
+    let jugadorActual = 1
+
+    // Variable para saber si el juego ha terminado.
+    let juegoTerminado = false
+
+    // **Colocar dientes dañados de forma aleatoria**
+
+    // Mientras no hayamos colocado todos los dientes enfermos:
+    while (cantidadDientesColocados < cantidadDientesEnfermos) {
+        // Elegir una posición aleatoria en el array `dientes`.
+        let posicionAleatoria = Math.floor(Math.random() * dientes.length)
+
+        // Si el diente en esa posición es sano (0), lo cambiamos a enfermo (1).
+        if (dientes[posicionAleatoria] == 0) {
+            dientes[posicionAleatoria] = 1
+
+            // Aumentamos el contador de dientes enfermos colocados.
+            cantidadDientesColocados++
+        }
+    }
+
+    // **Ciclo principal del juego**
+
+    // El ciclo se ejecuta hasta que el juego termine (juegoTerminado = true).
+    while (!juegoTerminado) {
+        // Mostrar el estado visible de los dientes (los emojis).
+        console.log("Estado visible: " + visibles)
+
+        // Indicar de quién es el turno.
+        console.log("Turno del jugador " + jugadorActual)
+
+        // Solicitar al jugador que elija un diente.
+        let seleccion = prompt("Jugador " + jugadorActual + ", elige un diente (0-9):")
+
+        // Convertir la entrada del usuario a un número.
+        seleccion = Number(seleccion)
+
+        // **Validar la selección**
+
+        // Si el diente ya fue presionado (no es "🦷"):
+        if (visibles[seleccion] != "🦷") {
+            console.log("Ese diente ya fue presionado. Elige otro.")
+        } else {
+            // **Evaluar la selección**
+
+            // Si el diente seleccionado está enfermo (1):
+            if (dientes[seleccion] == 1) {
+                // Cambiar el estado visible del diente a "💥" (cocodrilo muerde).
+                visibles[seleccion] = "💥"
+
+                // Mostrar mensaje de que el jugador perdió.
+                console.log("¡El cocodrilo mordió! Jugador " + jugadorActual + " pierde.")
+
+                // Terminar el juego.
+                juegoTerminado = true
+            } else {
+                // Si el diente seleccionado está sano (0):
+                // Cambiar el estado visible del diente a "✅" (diente presionado).
+                visibles[seleccion] = "✅"
+
+                // Incrementar el contador de dientes presionados.
+                cantidadDientesPresionados++
+
+                // **Verificar si todos los dientes sanos han sido presionados**
+
+                // Si el número de dientes sanos presionados es igual al total de dientes sanos:
+                if (cantidadDientesPresionados == cantidadDientesSanos) {
+                    // Mostrar mensaje de que ambos jugadores ganaron.
+                    console.log("¡Todos los dientes sanos han sido presionados! Ambos jugadores ganan.")
+
+                    // Terminar el juego.
+                    juegoTerminado = true
+                }
+            }
+
+            // **Cambiar turno**
+
+            // Si el jugador actual es el 1, cambiar al jugador 2.
+            if (jugadorActual == 1) {
+                jugadorActual = 2
+            } else {
+                // Si el jugador actual es el 2, cambiar al jugador 1.
+                jugadorActual = 1
+            }
+        }
+    }
+
+    // Mostrar el estado final de los dientes visibles al final del juego.
+    console.log("Estado visible: " + visibles)
+</script>

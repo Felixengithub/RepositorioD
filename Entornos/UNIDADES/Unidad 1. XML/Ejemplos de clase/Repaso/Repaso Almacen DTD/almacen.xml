@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inventario [
+    <!ELEMENT inventario (producto+)>
+    <!ELEMENT producto (nombre, categoria, precio, stock)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT categoria (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT stock (#PCDATA)>
+    <!ATTLIST producto id ID #REQUIRED>
+]>
+<inventario>
+    <producto id="P001">
+        <nombre>Laptop Dell XPS 13</nombre>
+        <categoria>Laptop</categoria>
+        <precio>1200.00</precio>
+        <stock>50</stock>
+    </producto>
+    <producto id="P002">
+        <nombre>iPhone 13 Pro</nombre>
+        <categoria>Móvil</categoria>
+        <precio>999.00</precio>
+        <stock>30</stock>
+    </producto>
+    <producto id="P003">
+        <nombre>iPad Pro</nombre>
+        <categoria>Tablet</categoria>
+        <precio>800.00</precio>
+        <stock>20</stock>
+    </producto>
+</inventario>

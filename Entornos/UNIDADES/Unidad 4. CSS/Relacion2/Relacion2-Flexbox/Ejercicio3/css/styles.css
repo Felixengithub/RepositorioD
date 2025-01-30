@@ -1,0 +1,50 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Ejercicio 3 */
+.flex-container.flex-grow {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.flex-item.item1 {
+    flex-grow: 10;
+    background-color: #ffd699;
+    border: 1px solid #ffae42;
+    padding: 20px;
+    text-align: center;
+}
+
+.flex-item.item2 {
+    flex-grow: 2;
+    background-color: #99d6ff;
+    border: 1px solid #42aaff;
+    padding: 20px;
+    text-align: center;
+}
+
+.flex-item.item3 {
+    flex-grow: 1;
+    background-color: #d699ff;
+    border: 1px solid #ae42ff;
+    padding: 20px;
+    text-align: center;
+}

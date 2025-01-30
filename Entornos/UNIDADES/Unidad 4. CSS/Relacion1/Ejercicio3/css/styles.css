@@ -1,0 +1,18 @@
+/* Eliminar márgenes y relleno de todos los elementos */
+* {
+    margin: 0px;
+}
+
+/* Cambiar el color del texto de los elementos <li> hijos directos de <div> */
+div > ul > li {
+    color: #3498db; /* Azul */
+    font-weight: bold; /* Negrita */
+}
+
+/* Aplicar un color de fondo a los párrafos inmediatamente después de la lista */
+div + p {
+    background-color: #f1c40f; /* Fondo amarillo */
+    color: #000; /* Texto negro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}

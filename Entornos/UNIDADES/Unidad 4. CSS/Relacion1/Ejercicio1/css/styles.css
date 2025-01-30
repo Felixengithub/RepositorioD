@@ -1,0 +1,5 @@
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Fondo degradado */
+    color: #333; /* Color del texto */
+    margin: 20px; /* Margen uniforme */
+}

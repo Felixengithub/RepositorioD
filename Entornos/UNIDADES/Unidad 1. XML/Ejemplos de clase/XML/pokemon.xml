@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pokedex [
+    <!ELEMENT pokedex (pokemon+)>
+    <!ELEMENT pokemon (name, types, abilities, baseStats, experience, legendary?)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT types (type+)>
+    <!ELEMENT type (#PCDATA)>
+    <!ELEMENT abilities (ability+)>
+    <!ELEMENT ability (#PCDATA)>
+    <!ELEMENT baseStats (HP, ATK, DEF)>
+    <!ELEMENT HP (#PCDATA)>
+    <!ELEMENT ATK (#PCDATA)>
+    <!ELEMENT DEF (#PCDATA)>
+    <!ELEMENT experience (#PCDATA)>
+    <!ELEMENT legendary EMPTY>
+]>
+
+<pokedex>
+    <pokemon>
+        <name>Pikachu</name>
+        <types>
+            <type>Electric</type>
+        </types>
+        <abilities>
+            <ability>Static</ability>
+            <ability>Lightning Rod</ability>
+        </abilities>
+        <baseStats>
+            <HP>35</HP>
+            <ATK>55</ATK>
+            <DEF>40</DEF>
+        </baseStats>
+        <experience>112</experience>
+        <!-- Pikachu no es legendario, por lo que no se incluye el elemento <legendary> -->
+    </pokemon>
+
+    <pokemon>
+        <name>Rayquaza</name>
+        <types>
+            <type>Dragon</type>
+            <type>Flying</type>
+        </types>
+        <abilities>
+            <ability>Air Lock</ability>
+        </abilities>
+        <baseStats>
+            <HP>105</HP>
+            <ATK>150</ATK>
+            <DEF>90</DEF>
+        </baseStats>
+        <experience>306</experience>
+        <legendary/>
+        <!-- Rayquaza es legendario, por lo que se incluye el elemento <legendary> -->
+    </pokemon>
+</pokedex>
